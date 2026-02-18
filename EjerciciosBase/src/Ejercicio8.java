@@ -8,5 +8,14 @@ public class Ejercicio8 {
         System.out.print("Introduzca el número de filas y columnas que desea para su matriz cuadrada: ");
         int longitud = Integer.parseInt(consola.nextLine());
         int[][] matriz = new int[longitud][longitud];
+
+        // Prueba: Rellenar matriz
+        for (int i = 0; i < longitud; i++) {
+            for (int j = 0; j < longitud; j ++) {
+                System.out.print("Introduce un número para la posición [" + i + "] [" + j + "] -> ");
+                matriz[i][j] = Integer.parseInt(consola.nextLine());
+            }
+        }
+
     }
 }
