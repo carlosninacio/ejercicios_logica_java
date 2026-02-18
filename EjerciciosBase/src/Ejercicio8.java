@@ -19,8 +19,9 @@ public class Ejercicio8 {
 
         // Prueba: Recorrer matriz
         for (int i = 0; i < longitud; i++) {
+            System.out.println("");
             for (int j = 0; j < longitud; j ++) {
-                System.out.println(matriz[i][j]);
+                System.out.print(" [" + matriz[i][j] + "]");
             }
         }
 
