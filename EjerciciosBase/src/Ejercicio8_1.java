@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Ejercicio8_1 {
     public static void main(String[] args) {
 
-        // Matrices: sumar matrices n x m y verificar si son identidad (solo si es cuadrada)
+        // Crear 2 matrices y acceder a valores de la primera matriz
 
         Scanner consola = new Scanner(System.in);
         System.out.print("Introduzca el número de filas de la primera matriz: ");
