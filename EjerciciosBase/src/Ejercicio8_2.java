@@ -20,12 +20,17 @@ public class Ejercicio8_2 {
 
         System.out.println("\nMatriz 1");
         imprimirMatriz(matriz1);
-        
+        System.out.println();
+        esIdentidad(matriz1);
         System.out.println("\n\nMatriz 2");
         imprimirMatriz(matriz2);
+        System.out.println();
+        esIdentidad(matriz2);
         System.out.println("\n\nResultado suma de matrices");
         int[][] resultado = sumarMatrices(matriz1,matriz2);
         imprimirMatriz(resultado);
+        System.out.println();
+        esIdentidad(resultado);
 
     }
 
@@ -59,5 +64,29 @@ public class Ejercicio8_2 {
             }
         }
         return resultado;
+    }
+
+    static void esIdentidad(int[][] matriz) {
+        boolean esIdentidad = true;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j ++) {
+                if (i == j) {
+                    if (matriz[i][j] != 1) {
+                        esIdentidad = false;
+                        break;
+                    }
+                } else {
+                    if (matriz[i][j] != 0) {
+                        esIdentidad = false;
+                        break;
+                    }
+                }
+            }
+            if (!esIdentidad) {
+                break;
+            }
+        }
+        String mensaje = (esIdentidad) ? "\nLa matriz es identidad" : "\nLa matriz NO es identidad";
+        System.out.println(mensaje);
     }
 }
