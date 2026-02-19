@@ -10,6 +10,7 @@ public class Ejercicio9 {
         System.out.print("\n\nCadena -> " + cadena);
         System.out.println("\n\n\t- Vocales de la cadena: " + contarVocales(cadena));
         System.out.println("\t- Consonantes de la cadena: " + contarConsonantes(cadena));
+        System.out.println("\t- Espacios de la cadena: " + contarEspacios(cadena));
     }
 
     static int contarVocales(String cadena) {
@@ -36,6 +37,18 @@ public class Ejercicio9 {
             }
         }
         return contadorConsonantes;
+    }
+
+    static int contarEspacios(String cadena) {
+        int contadorEspacios = 0;
+        char caracter;
+        for (int i = 0; i < cadena.length(); i++) {
+            caracter = cadena.charAt(i);
+            if (String.valueOf(caracter).matches(" ")) {
+                contadorEspacios++;
+            }
+        }
+        return contadorEspacios;
     }
 
 
