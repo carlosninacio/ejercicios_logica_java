@@ -8,7 +8,8 @@ public class Ejercicio9 {
         System.out.print("Introduce la cadena de la que deseas contar su contenido: ");
         String cadena = consola.nextLine();
         System.out.print("\n\nCadena -> " + cadena);
-        System.out.println("\n\t- Vocales de la cadena: " + contarVocales(cadena));
+        System.out.println("\n\n\t- Vocales de la cadena: " + contarVocales(cadena));
+        System.out.println("\t- Consonantes de la cadena: " + contarConsonantes(cadena));
     }
 
     static int contarVocales(String cadena) {
@@ -23,4 +24,19 @@ public class Ejercicio9 {
         }
         return contadorVocales;
     }
+
+    static int contarConsonantes(String cadena) {
+        int contadorConsonantes = 0;
+        cadena = cadena.trim().replace(" ","");
+        char caracter;
+        for (int i = 0; i < cadena.length(); i++) {
+            caracter = cadena.charAt(i);
+            if (Character.isLetter(caracter) && !String.valueOf(caracter).matches("[aeiouAEIOU]")) {
+                contadorConsonantes++;
+            }
+        }
+        return contadorConsonantes;
+    }
+
+
 }
