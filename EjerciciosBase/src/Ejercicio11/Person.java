@@ -2,40 +2,32 @@ package Ejercicio11;
 
 public class Person {
 
-    private String name;
+    private String nombre;
     private int edad;
 
-    public Person (String name, int edad) {
-        this.name = name;
+    public Person (String nombre, int edad) {
+        this.nombre = nombre;
         this.edad = edad;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public String getNombre() {
+        return nombre;
     }
 
     public int getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
+                "name='" + nombre + '\'' +
                 ", edad=" + edad +
                 '}';
     }
 
     public void birthday() {
         System.out.println("Cumpliste 1 año, felicidades!");
-        this.edad = ++this.edad;
+        this.edad++;
     }
 }
