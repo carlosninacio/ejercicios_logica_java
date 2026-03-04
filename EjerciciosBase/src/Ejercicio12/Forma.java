@@ -1,4 +1,5 @@
 package Ejercicio12;
 
-public class Forma {
+public abstract class Forma {
+    public abstract double calcularArea();
 }
